@@ -1,0 +1,17 @@
+<aura:component implements="force:lightningQuickAction">
+    
+    <aura:attribute type="string" name="firstName" default="Shashank" />
+    <aura:handler name="init" value="{! this }" action="{! c.doInit }" />
+    <lightning:navigation aura:id="navigationService" />
+    
+    <h2>On this page, we demonstrate navigation using 
+        <a href="https://developer.salesforce.com/docs/component-library/bundle/lightning:navigation/documentation" 
+           target="_blank">lightning:navigation.
+        </a>
+    </h2>
+    
+    <h3>Hello {! v.firstName }!</h3>
+    
+    <lightning:button label="Navigate" title="navigation using force:navigateToComponent" onclick="{! c.navigate }"/>
+    
+</aura:component>
